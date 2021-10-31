@@ -6,7 +6,7 @@ FLAGS= -Wall -g
 
 #make all
 all: loops recursived recursives loopd mains maindloop maindrec
-
+.PHONY: clean
 #make clean
 clean: 
 	rm -f *.o *.a *.so mains maindloop maindrec
@@ -43,11 +43,11 @@ mains: main.o libclassrec.a
 
 #make maindloop
 maindloop: main.o libclassloops.so
-	$(CC) $(FLAGS) -o maindloop main.o libclassloops.so -lm
+	$(CC) $(FLAGS) -o maindloop main.o ./libclassloops.so -lm
 
 #make maindrec
 maindrec: main.o libclassrec.so
-	$(CC) $(FLAGS) -o maindrec main.o libclassrec.so -lm
+	$(CC) $(FLAGS) -o maindrec main.o ./libclassrec.so -lm
 main.o: main.c NumClass.h
 	$(CC) $(FLAGS) -c main.c -lm
 

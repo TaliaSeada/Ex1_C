@@ -24,22 +24,18 @@ int isArmstrong(int num){
         return 0;
     }
 }
+int revers(int num){
+    int size=length(num);
+    if(size==0){
+        return 0;
+    }
+    return((num%10*pow(10,size))+revers(num/10));
+}
 int isPalindrome(int num){
-    if (num < 10 ){
+    int rev=revers(num);
+    rev/=10;
+    if(rev==num){
         return 1;
     }
-    int last = num;
-    int first = num;
-        while(first >= 10) {
-            first = first / 10;
-        }
-        last = last % 10;
-        if(first==last) {
-            num=num-last*pow(10,length(num));
-            num/=10;
-           return isPalindrome(num);
-        }
-        else{
-            return 0;
-        }
+    return 0;
 }
