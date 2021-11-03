@@ -3,7 +3,7 @@
 #include <stdio.h>
 int main(){
     int start, end;
-    scanf("%d %d",&start,&end);
+    scanf("%d%d",&start,&end);
     printf("The Armstrong numbers are:");
     for(int i=start; i<=end; i++){
         if(isArmstrong(i)==1){
