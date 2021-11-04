@@ -18,16 +18,16 @@ int recursion(int num,int len){
 int isArmstrong(int num){
     int res=recursion(num,length(num));
     if(res==num){
-        return 1;
+        return TRUE;
     }
     else{
-        return 0;
+        return FALSE;
     }
 }
 int revers(int num){
     int size=length(num);
     if(size==0){
-        return 0;
+        return FALSE;
     }
     return((num%10*pow(10,size))+revers(num/10));
 }
@@ -35,7 +35,7 @@ int isPalindrome(int num){
     int rev=revers(num);
     rev/=10;
     if(rev==num){
-        return 1;
+        return TRUE;
     }
-    return 0;
+    return FALSE;
 }

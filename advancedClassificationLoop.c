@@ -22,10 +22,10 @@ int isArmstrong(int num){
         res += pow(num, length);
     }
     if(res == temp2){
-        return 1;
+        return TRUE;
     }
     else {
-        return 0;
+        return FALSE;
     }
 }
 int isPalindrome(int num){
@@ -36,10 +36,10 @@ int isPalindrome(int num){
         num /= 10;
     }
     if (res == temp){
-        return 1;
+        return TRUE;
     }
     else {
-        return 0;
+        return FALSE;
     }
 }
 

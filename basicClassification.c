@@ -1,10 +1,10 @@
 #include "NumClass.h"
 int factorial(int n){
     if(n == 0) {
-        return 1;
+        return TRUE;
     }
     if(n == 1) {
-        return 1;
+        return TRUE;
     }
     return factorial(n-1)*n;
 }
@@ -19,24 +19,24 @@ int isStrong(int num){
        res += factorial(num); 
     }
     if(res == temp){
-        return 1;
+        return TRUE;
     }
-    return 0;
+    return FALSE;
     
 }
 int isPrime(int num){
     if(num == 0) {
-        return 0;
+        return FALSE;
     }
     if(num == 1) {
-        return 1;
+        return TRUE;
     }
     for(int i = 2; i <= num/2; i++){
         if(num % i == 0){
-            return 0;
+            return FALSE;
         }
     }
-    return 1;
+    return TRUE;
 }
 
 

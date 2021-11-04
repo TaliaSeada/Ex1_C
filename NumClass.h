@@ -1,5 +1,7 @@
 #ifndef _NUMCLASS_H_
     #define _NUMCLASS_H_
+    #define TRUE 1
+    #define FALSE 0
     /* will return if a number is Armstrong number
     An Armstrong number is an n-digit number that is equal to the sum of the nth powers of its digits.
     For Example: 4^3 + 0^3 + 7^3 = 64 + 0 + 343 = 407 */
